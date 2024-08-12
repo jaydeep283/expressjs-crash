@@ -3,9 +3,33 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Home Page</title>
+        <title>Posts</title>
+        <link rel="stylesheet" href="./CSS/index.css" />
     </head>
     <body>
-        <h1>Welcom to Home Page</h1>
+        <h1>Posts</h1>
+        <form id="add-post-form">
+            <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Enter post title to Create"
+            />
+            <button type="submit">Create Post</button>
+        </form>
+        <form id="del-post-form">
+            <input
+                type="text"
+                name="title"
+                id="title"
+                placeholder="Enter post title to Delete"
+            />
+            <button type="submit">Delete Post</button>
+        </form>
+
+        <button id="get-posts-btn">Get Posts</button>
+        <div id="output"></div>
+
+        <script src="./JS/main.js"></script>
     </body>
 </html>

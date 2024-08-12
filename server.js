@@ -1,4 +1,5 @@
 import path from "path";
+import url from "url";
 import posts from "./routes/posts.js";
 import logger from "./middleware/logger.js";
 import errorHandler from "./middleware/error.js";
@@ -8,10 +9,12 @@ import express from "express";
 import { log } from "console";
 const app = express();
 
+const __dirname = import.meta.dirname;
+
 const port = process.env.PORT || 8000;
 
 // //To make use of Static folder
-// app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public")));
 
 // app.get("/", (req, res) => {
 //     res.sendFile(path.join(__dirname, "public", "index.html"));
